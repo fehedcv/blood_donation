@@ -34,7 +34,7 @@
             🔍 Search Donors
         </button>
 
-        <button onclick="location.href='dashboard.html'"
+        <button onclick="location.href='/dashboard'"
             class="w-full bg-gray-500 text-white py-2 rounded mt-4 hover:bg-gray-600 transition">
             ⬅ Back to Dashboard
         </button>
@@ -59,7 +59,7 @@
             const bloodType = bloodGroup + rhFactor;  // Combine values
 
             try {
-                const response = await fetch(`http://127.0.0.1:80/search_blood?blood_type=${encodeURIComponent(bloodType)}`);
+               const response = await fetch(`https://blood-donation-oe1d.onrender.com/search_blood?blood_type=${encodeURIComponent(bloodType)}`);
                 const result = await response.json();
 
                 if (result.success) {
