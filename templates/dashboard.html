@@ -11,12 +11,12 @@
     <div class="bg-white p-8 rounded-lg shadow-lg w-96 text-center">
         <h2 class="text-2xl font-bold text-red-600 mb-6">Dashboard</h2>
 
-        <button onclick="location.href='add_donor.html'"
+        <button onclick="location.href='/add_donor'"
             class="w-full bg-red-500 text-white py-2 rounded mb-4 hover:bg-red-600 transition">
             ➕ Add Donor
         </button>
 
-        <button onclick="location.href='search_blood.html'"
+        <button onclick="location.href='/search_blood'"
             class="w-full bg-red-500 text-white py-2 rounded hover:bg-red-600 transition">
             🔍 Search for Blood Type
         </button>
@@ -29,7 +29,7 @@
     <script>
         function logout() {
             alert("✅ Logged out successfully!");
-            window.location.href = "index.html"; // Redirect to login
+            window.location.href = "/"; // Redirect to login
         }
     </script>
 
