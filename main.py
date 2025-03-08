@@ -32,9 +32,17 @@ def home():
 def dashboard():
     return render_template("dashboard.html")
 
-@app.route("/signip")
+@app.route("/signup")
 def signip():
     return render_template("signup.html")
+
+@app.route("/add_donor")
+def add():
+    return render_template("add_donor.html")
+
+@app.route("/search_blood")
+def search():
+    return render_template("search_blood.html")
 
 @app.route("/signup", methods=["POST"])
 def signup():
