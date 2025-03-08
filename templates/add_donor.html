@@ -70,7 +70,18 @@
                     body: JSON.stringify({ name, blood_type: bloodType, location, phone })
                 });
 
-                const result = await response.json();
+                const text = await response.text(); // Get raw response text
+                console.log("Raw Response:", text); // Debugging
+
+                let result;
+                try {
+                    result = JSON.parse(text); // Manually parse JSON
+                } catch (err) {
+                    console.error("JSON Parse Error:", err);
+                    alert("❌ Server returned an unexpected response!");
+                    return;
+                }
+
                 if (result.success) {
                     alert("✅ Donor added successfully!");
                     window.location.href = "/dashboard"; // Redirect to Dashboard
