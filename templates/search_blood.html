@@ -68,8 +68,14 @@
                     donorList.innerHTML = "";
 
                     result.donors.forEach(donor => {
-                        donorList.innerHTML += `<li><strong>${donor.name}</strong> - 📍 ${donor.location} - 📞 ${donor.phone}</li>`;
-                    });
+    donorList.innerHTML += `
+        <li>
+            <strong>${donor.name}</strong> <br>
+            📍 ${donor.location} <br>
+            📞 ${donor.phone} <br><br>
+        </li>`;
+});
+
                 } else {
                     alert("❌ No donors found!");
                 }
