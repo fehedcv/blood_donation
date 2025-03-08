@@ -28,6 +28,10 @@ CORS(app)  # Enable CORS for frontend communication
 def home():
     return render_template('index.html')
 
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
+
 @app.route("/signup", methods=["POST"])
 def signup():
     data = request.json
