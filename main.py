@@ -32,6 +32,10 @@ def home():
 def dashboard():
     return render_template("dashboard.html")
 
+@app.route("/signip")
+def signip():
+    return render_template("signup.html")
+
 @app.route("/signup", methods=["POST"])
 def signup():
     data = request.json
