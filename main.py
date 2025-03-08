@@ -26,7 +26,7 @@ CORS(app)  # Enable CORS for frontend communication
 
 @app.route("/")
 def home():
-    render_template('index.html')
+    return render_template('index.html')
 
 @app.route("/signup", methods=["POST"])
 def signup():
