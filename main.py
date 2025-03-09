@@ -33,7 +33,7 @@ def dashboard():
     return render_template("dashboard.html")
 
 @app.route("/signup")
-def signip():
+def signup():
     return render_template("signup.html")
 
 @app.route("/add_donor")
