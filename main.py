@@ -26,7 +26,8 @@ else:
 
 # Initialize Flask app
 app = Flask(__name__)
-CORS(app)  # Enable CORS for frontend communication
+FRONTEND_URL = os.getenv("FRONTEND_URL", "https://blood-donation-oe1d.onrender.com")
+CORS(app, resources={r"/*": {"origins": FRONTEND_URL}})
 
 ### 🔹 ROUTES (Frontend Pages) ###
 @app.route("/")
